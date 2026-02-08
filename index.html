@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Love Dialog</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="stle.css">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{display:flex;justify-content:center;align-items:center;min-height:100vh;background:linear-gradient(135deg,#001f5b,#000);background-image:radial-gradient(circle,#08263f 1px,transparent 1px);background-size:20px 20px;font-family:"Arial",sans-serif;color:#cfe8ff}
+    .container{text-align:center}
+    .letter-icon{width:120px;height:100px;background:#06203a;border:3px solid #1e90ff;border-radius:8px;margin:0 auto 20px;position:relative;display:flex;justify-content:center;align-items:center;box-shadow:0 4px 12px rgba(0,0,0,.4)}
+    .letter-icon::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:#14365a;border-radius:8px 8px 0 0;clip-path:polygon(0 0,100% 0,50% 100%);border:3px solid #104e8b;border-bottom:none}
+    .letter-heart{font-size:50px;color:#1e90ff;position:relative;z-index:2}
+    .letter-text{color:#9fcfff;font-size:14px;font-weight:bold;margin-top:10px;letter-spacing:1px}
+    #letter-wrapper{cursor:pointer;transition:transform .3s ease}
+    #letter-wrapper:hover .letter-icon{transform:scale(1.05);box-shadow:0 6px 16px rgba(0,0,0,.45)}
+    .dialog-box{display:none;background:#000;border:3px solid #1e90ff;border-radius:10px;padding:20px;width:320px;text-align:center;box-shadow:0 12px 24px rgba(0,0,0,.6);color:#cfe8ff}
+    .title{color:#fff;font-size:18px;font-weight:bold;margin-bottom:15px;display:flex;gap:5px;justify-content:center}
+    .heart{color:#1e90ff}
+    .content{background:repeating-linear-gradient(45deg,#083754,#083754 10px,#062b4b 10px,#062b4b 20px);padding:20px;border-radius:5px;margin-bottom:15px;min-height:80px;display:flex;flex-direction:column;justify-content:center}
+    .character{font-size:48px;margin-bottom:10px}
+    .question{color:#cfe8ff;font-size:14px;margin-bottom:15px}
+    .buttons{display:flex;gap:10px}
+    button{flex:1;padding:10px;border:2px solid #1e90ff;background:#000;color:#1e90ff;font-weight:bold;border-radius:5px;cursor:pointer;transition:.2s}
+    button:hover{background:#1e90ff;color:#000}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="letter-wrapper" onclick="openLetter()">
+      <div class="letter-icon"><span class="letter-heart">💌</span></div>
+      <div class="letter-text">❤ Letter for You ❤</div>
+    </div>
+    <div id="dialog-box" class="dialog-box">
+      <div class="title">
+        <span class="heart"></span>
+        <span h1>هل انتي حمارة</span>
+        <span class="heart"></span>
+      </div>
+      <div class="content">
+        <img src="assets/gg.png" alt="Logo" width="200" height="200">
+        <h1>تعرفيني؟<h1>
+      </div>
+      <div class="buttons">
+        <button onclick="location.href='love.html'">YES</button>
+        <button onclick="alert('Oh no! 😢')">NO</button>
+      </div>
+    </div>
+  </div>
+  <script>function openLetter(){document.getElementById('letter-wrapper').style.display='none';document.getElementById('dialog-box').style.display='block'}</script>
+</body>
+</html>
