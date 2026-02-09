@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>      
+   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Love Dialog</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="stle.css">
+  <title></title>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{display:flex;justify-content:center;align-items:center;min-height:100vh;background:linear-gradient(135deg,#001f5b,#000);background-image:radial-gradient(circle,#08263f 1px,transparent 1px);background-size:20px 20px;font-family:"Arial",sans-serif;color:#cfe8ff}
+    body{display:flex;justify-content:center;align-items:center;min-height:100vh;background:linear-gradient(135deg,#001f5b,#000);background-image:radial-gradient(circle,#08263f 1px,transparent 1px);background-size:20px 20px;font-family:"Arial",sans-serif;color:#0a89ff}
     .container{text-align:center}
     .letter-icon{width:120px;height:100px;background:#06203a;border:3px solid #1e90ff;border-radius:8px;margin:0 auto 20px;position:relative;display:flex;justify-content:center;align-items:center;box-shadow:0 4px 12px rgba(0,0,0,.4)}
     .letter-icon::before{content:'';position:absolute;top:0;left:0;right:0;height:50%;background:#14365a;border-radius:8px 8px 0 0;clip-path:polygon(0 0,100% 0,50% 100%);border:3px solid #104e8b;border-bottom:none}
@@ -22,33 +21,40 @@
     .content{background:repeating-linear-gradient(45deg,#083754,#083754 10px,#062b4b 10px,#062b4b 20px);padding:20px;border-radius:5px;margin-bottom:15px;min-height:80px;display:flex;flex-direction:column;justify-content:center}
     .character{font-size:48px;margin-bottom:10px}
     .question{color:#cfe8ff;font-size:14px;margin-bottom:15px}
-    .buttons{display:flex;gap:10px}
     button{flex:1;padding:10px;border:2px solid #1e90ff;background:#000;color:#1e90ff;font-weight:bold;border-radius:5px;cursor:pointer;transition:.2s}
-    button:hover{background:#1e90ff;color:#000}
-  </style>
+    button:hover{background:rgba(12, 96, 221, 0.78);color:#ffffff}
+    
+</style>
 </head>
 <body>
   <div class="container">
     <div id="letter-wrapper" onclick="openLetter()">
       <div class="letter-icon"><span class="letter-heart">💌</span></div>
-      <div class="letter-text">❤ Letter for You ❤</div>
+      <div class="letter-text">Letter for You</div>
     </div>
     <div id="dialog-box" class="dialog-box">
       <div class="title">
         <span class="heart"></span>
-        <span h1></span>
-        <span class="heart"></span>
+      
       </div>
       <div class="content">
-        <img src="assets/gg.png" alt="Logo" width="200" height="200">
-        <h1>تعرفيني؟<h1>
+        <img src="assets/soal.png" alt="Logo" class="soal-img">
+        
+        <h1>تعرفيني؟</h1>
       </div>
       <div class="buttons">
-        <button onclick="location.href='love.html'">YES</button>
-        <button onclick="alert('Oh no! 😢')">NO</button>
+        <button class="button" onclick="location.href='yes.html' ">YES</button>
+        <button class="button" onclick="location.href='nno.html' ">NO</button>
       </div>
+
+    
+    
+    </div>
     </div>
   </div>
+
+
+</div>
   <script>function openLetter(){document.getElementById('letter-wrapper').style.display='none';document.getElementById('dialog-box').style.display='block'}</script>
 </body>
 </html>

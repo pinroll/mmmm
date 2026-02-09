@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{display:flex;justify-content:center;align-items:center;min-height:100vh;background:linear-gradient(135deg,#001f5b,#000);background-image:radial-gradient(circle,#08263f 1px,transparent 1px);background-size:20px 20px;font-family:"Arial",sans-serif;color:#cfe8ff}
+    .window{background:#041423;border:3px solid #1e90ff;border-radius:12px;width:400px;box-shadow:0 10px 30px rgba(0,0,0,.6)}
+    .title-bar{background:linear-gradient(to right,#0f3b72,#14365a);padding:8px;border-radius:10px 10px 0 0;display:flex;justify-content:space-between;align-items:center;color:#cfe8ff;font-weight:bold;font-size:18px}
+    .buttons-bar{display:flex;gap:4px}
+    .button-min,.button-max,.button-close{width:20px;height:20px;background:#06203a;border:1px solid #104e8b;border-radius:3px;cursor:pointer;font-size:12px;display:flex;align-items:center;justify-content:center;color:#1e90ff}
+    .button-close:hover{background:#1e90ff;color:#000}
+    .content-window{padding:30px;text-align:center}
+    .no-title{font-size:48px;font-weight:bold;color:#1e90ff;margin-bottom:20px;letter-spacing:3px;text-shadow:2px 2px 6px rgba(0,0,0,.6)}
+    .no-image{margin:20px 0;font-size:80px}
+    .no-text{font-size:24px;color:#9fcfff;font-weight:bold;margin:20px 0;font-style:italic}
+    .sub-text{font-size:14px;color:#cfe8ff;margin-top:15px;line-height:1.8}
+    .button-section{margin-top:25px}
+    .nno-button{padding:12px 30px;background:#000;color:#1e90ff;border:2px solid #1e90ff;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer;transition:.3s}
+    .nno-button:hover{background:#1e90ff;color:#000;transform:scale(1.05)}
+    </style>
+</head>
+<body>
+  <div class="window">
+    <div class="title-bar"> 
+      <div class="buttons-bar">
+        <div class="button-min">_</div>
+        <div class="button-max">□</div>
+        <div class="button-close">✕</div>
+    </div>
+    </div>
+    <div class="content-window">
+      <div class="nno-title">شكرا لمشاركتي رايك</div>
+         <img src="assets/nno.png" alt="Logo" width="300" height="300">
+            <h1 class="i-know-you">انا نعرفك ؟</h1>
+      <div class="sub-text"></div>
+        <button class="nno-button" onclick="location.href='index.html'">← Back</button>
+      </div>
+    </div>
+        
+    </div>
+  </div> 
+</body>
+</html>

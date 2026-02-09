@@ -1,23 +1,62 @@
-.buttons {
-display: flex;
-justify-content: center;
-gap: 30px;
-position: relative;
+.button {
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  --glow-color: #004fee;
+  --glow-spread-color: #1e90ff;
+  --btn-color: rgb(12, 96, 221);
+  --text-color: #ffffff;
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--text-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 0.5em;
+  outline: none;
 
+  box-shadow:
+    0 0  0.1px var(--glow-color),
+    0 0 100em 1px var(--glow-spread-color),
+    inset 0 0 0.10em 0.10em var(--glow-color);
+
+  text-shadow: 0 0 0.1em var(--glow-color);
+  transition: 0.4s;
 }
 
-.no-wrapper {
-position: relative;
-}   
-
-.btn {
-width: 120px;
-cursor: pointer;
-user-select: none;
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 12px var(--glow-color),
+    0 0 30px var(--glow-spread-color),
+    inset 0 0 10px rgba(255,255,255,0.25);
 }
 
-.yes•btn, .no•btn {
-width: 120px;
-height: auto;
-display: inline-block;
+.soal-img {
+  position: relative;
+  animation: float 0.7s infinite alternate ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(10px); }
+  100% { transform: translateY(-14px); } 
+}
+
+.yes-img {
+  width: 20px;     
+  height: auto;   
+  margin: 20px 0;  
+  display: block;   
+  transition: all 0.3s ease; 
+}
+
+.i-know-you {
+    position: absolute;   
+    top: 200px;          
+    left: 50%;         
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #9fcfff;
+    font-weight: bold;
 }
